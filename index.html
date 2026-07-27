@@ -1,136 +1,566 @@
-Reverse Keyboard
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Reverse Keyboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Tajawal:wght@300;400;500&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-سياسة
-الخصوصية
-Privacy Policy
+  body {
+    background: #fafafa;
+    color: #1a1a1a;
+    font-family: 'Tajawal', sans-serif;
+    font-weight: 300;
+    line-height: 1.9;
+  }
 
-آخر تحديث — Last updated: May 2026
+  /* ── صفحة الغلاف ── */
+  .cover {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 24px;
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+    overflow: hidden;
+  }
 
-مقدمة
-من نحن
-تطبيق Reverse Keyboard هو لوحة مفاتيح عربية تعمل على أجهزة Android. نحن نحترم خصوصيتك ونلتزم بحمايتها. توضّح هذه السياسة ما نجمعه وما لا نجمعه.
+  .cover::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 31px,
+        #e8e8e8 31px,
+        #e8e8e8 32px
+      );
+    opacity: 0.45;
+  }
 
-البيانات
-ما الذي لا نجمعه
-لا نجمع أي نص تكتبه على لوحة المفاتيح.
-لا نخزّن كلمات المرور أو البيانات الحساسة.
-لا نرسل بياناتك الشخصية لأي طرف ثالث.
-لا نستخدم أي أداة تتبع أو إحصاءات مستخدمين.
-الترجمة النصية
-ميزة الترجمة النصية
-عند الضغط على زر الترجمة في شريط الأدوات، يُرسل النص الذي تحدده إلى خدمات ترجمة مجانية ومفتوحة المصدر. التطبيق يجرّب الخدمات بالترتيب التالي حتى ينجح أحدها:
+  .cover-inner {
+    position: relative;
+    text-align: center;
+  }
 
-MyMemory — api.mymemory.translated.net
-LibreTranslate — libretranslate.com و translate.argosopentech.com
-Apertium — apertium.org
-هذه الخدمات لها سياسات خصوصية مستقلة. لا يُرسل أي نص دون إجراء صريح منك.
+  .cover-label {
+    font-family: 'Caveat', cursive;
+    font-size: 15px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 28px;
+  }
 
-الصوت
-ميزة الترجمة بالصوت
-عند تفعيل ميزة "الترجمة بالصوت" والضغط على زر الميكروفون، يُعالَج الكلام محلياً عبر نظام Android للتعرف على الصوت، ثم إذا اكتشف التطبيق أن لغة الكلام تختلف عن لغة الكيبورد، يُرسل النص المُعرَّف إلى إحدى خدمات الترجمة أعلاه.
+  .cover-title {
+    font-family: 'Caveat', cursive;
+    font-size: clamp(42px, 8vw, 72px);
+    font-weight: 700;
+    color: #111;
+    line-height: 1.15;
+    margin-bottom: 20px;
+  }
 
-يمكنك إيقاف هذه الميزة من إعدادات التطبيق ← الترجمة بالصوت ← OFF. عند إيقافها، يُكتب الكلام مباشرة بدون أي إرسال لخوادم خارجية.
+  .cover-subtitle {
+    font-family: 'Caveat', cursive;
+    font-size: 22px;
+    color: #555;
+    margin-bottom: 48px;
+  }
 
-الأذونات
-إذن الميكروفون
-يُستخدم الميكروفون فقط عند الضغط على زر الإدخال الصوتي. لا يُسجَّل الصوت أو يُخزَّن، بل يُعالَج مباشرةً بواسطة خدمة التعرف على الكلام في جهازك (Google Speech).
+  .cover-line {
+    width: 60px;
+    height: 2px;
+    background: #111;
+    margin: 0 auto 28px;
+  }
 
-الأذونات
-إذن الصور والفيديو
-يُستخدم للسماح لك باختيار صورة أو فيديو لتعيينه خلفيةً للوحة المفاتيح. الملفات تبقى على جهازك ولا تُرفع لأي خادم.
+  .cover-date {
+    font-size: 13px;
+    color: #aaa;
+    letter-spacing: 1px;
+  }
 
-الخصوصية
-حقول كلمة المرور
-عند الكتابة في حقول كلمة المرور، يتوقف التطبيق تلقائياً عن عرض الاقتراحات أو تخزين أي نص.
+  /* ── الصفحات ── */
+  .page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 80px 32px;
+    position: relative;
+  }
 
-الحافظة
-الحافظة (Clipboard)
-يراقب التطبيق الحافظة لعرض زر اللصق السريع في شريط الأدوات. آخر نص تم نسخه يُخزَّن محلياً على جهازك فقط ولا يُرسل لأي خادم خارجي. لا يتم الوصول إلى الحافظة إلا عند فتح لوحة المفاتيح.
+  .page + .page {
+    border-top: 1px solid #e8e8e8;
+  }
 
-معرّف الجهاز
-معرّف الجهاز (ANDROID_ID)
-يستخدم التطبيق معرّف الجهاز للتحقق من صلاحيات المستخدم داخل التطبيق. لا يُرسل هذا المعرّف ولا يُخزَّن على أي خادم خارجي.
+  /* ── عنوان القسم ── */
+  .section-eyebrow {
+    font-family: 'Caveat', cursive;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #bbb;
+    margin-bottom: 12px;
+    display: block;
+  }
 
-ترجمة الشاشة
-ميزة ترجمة الشاشة (Screen OCR)
-عند الضغط على أيقونة ترجمة الشاشة في شريط الأدوات، يطلب التطبيق إذن النظام الرسمي لالتقاط الشاشة (MediaProjection) عبر حوار النظام الظاهر للمستخدم. يظهر إشعار دائم وزر إيقاف طوال مدة الجلسة، ولا تبدأ الجلسة أبداً بلا إشعار ظاهر.
+  h2 {
+    font-family: 'Caveat', cursive;
+    font-size: 30px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 18px;
+    line-height: 1.3;
+    position: relative;
+    padding-bottom: 14px;
+  }
 
-يُلتقط إطار الشاشة لحظياً فقط عند طلبك الصريح، ولا يحدث التقاط تلقائي.
-يُحلَّل النص محلياً على جهازك باستخدام مكتبة Tesseract للتعرف الضوئي على النصوص — بدون إنترنت.
-لا يُرسل أي محتوى من الشاشة إلى أي خادم خارجي.
-تنتهي الجلسة فور ضغطك على زر الإيقاف في الإشعار أو من داخل التطبيق.
-يُستخدم إذن SYSTEM_ALERT_WINDOW (النافذة العائمة) لعرض نتيجة الترجمة فوق التطبيقات الأخرى فقط، ولا يُستخدم لأي غرض آخر.
+  h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 36px;
+    height: 1.5px;
+    background: #111;
+  }
 
-الإعلانات
-الإعلانات (AdMob)
-النسخة المجانية تعرض إعلانات عبر Google AdMob. قد تجمع هذه الخدمة بيانات جهازك لعرض إعلانات مناسبة وفق سياسة خصوصية Google. يمكنك إيقاف تخصيص الإعلانات من: الإعدادات ← Google ← الإعلانات.
+  /* ltr sections */
+  .en h2::after {
+    right: auto;
+    left: 0;
+  }
 
-تواصل معنا
-التواصل
-إذا كانت لديك أي أسئلة حول هذه السياسة، يمكنك التواصل معنا عبر صفحة التطبيق على Google Play.
+  p {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 14px;
+  }
 
-English Version
-Introduction
-About This Policy
-Reverse Keyboard is an Arabic keyboard application for Android devices. We respect and are committed to protecting your privacy. This policy explains what we collect and what we do not collect.
+  ul {
+    padding-right: 18px;
+    margin-bottom: 14px;
+  }
 
-Data
-What We Do Not Collect
-We do not collect any text you type on the keyboard.
-We do not store passwords or sensitive data.
-We do not send your personal data to any third party.
-We do not use any tracking tools or user analytics.
-Translation
-Text Translation Feature
-When you tap the translate button in the toolbar, the text you select is sent to free, open-source translation services. The app tries the following services in order until one succeeds:
+  .en ul {
+    padding-right: 0;
+    padding-left: 18px;
+  }
 
-MyMemory — api.mymemory.translated.net
-LibreTranslate — libretranslate.com and translate.argosopentech.com
-Apertium — apertium.org
-These services have their own independent privacy policies. No text is sent without an explicit action from you.
+  li {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 8px;
+    position: relative;
+  }
 
-Voice
-Voice Translation Feature
-When the "Voice Translation" feature is enabled and you tap the microphone button, your speech is processed locally via Android's speech recognition system. If the app detects that the spoken language differs from the keyboard language, the recognised text is sent to one of the translation services above.
+  li::marker {
+    color: #bbb;
+  }
 
-You can disable this feature from the app settings → Voice Translation → OFF. When disabled, speech is typed directly without any data being sent to external servers.
+  strong {
+    font-weight: 500;
+    color: #111;
+  }
 
-Permissions
-Microphone Permission
-The microphone is used only when you tap the voice input button. Audio is not recorded or stored — it is processed directly by your device's speech recognition service (Google Speech).
+  a {
+    color: #111;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
 
-Permissions
-Photos & Video Permission
-Used to allow you to select an image or video to set as the keyboard background. Files remain on your device and are not uploaded to any server.
+  /* ── فاصل اللغتين ── */
+  .lang-divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 60px 32px;
+    max-width: 720px;
+    margin: 0 auto;
+  }
 
-Privacy
-Password Fields
-When typing in password fields, the app automatically stops displaying suggestions or storing any text.
+  .lang-divider::before,
+  .lang-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #ddd;
+  }
 
-Clipboard
-Clipboard
-The app monitors the clipboard to display a quick-paste button in the toolbar. The last copied text is stored locally on your device only and is not sent to any external server. The clipboard is only accessed when the keyboard is open.
+  .lang-divider-text {
+    font-family: 'Caveat', cursive;
+    font-size: 18px;
+    color: #bbb;
+    white-space: nowrap;
+  }
 
-Device Identifier
-Device Identifier (ANDROID_ID)
-The app uses the device identifier to verify user permissions within the app. This identifier is never sent to or stored on any external server.
+  /* ── قسم التواصل ── */
+  .contact-box {
+    background: #f0f0f0;
+    border-radius: 4px;
+    padding: 28px 32px;
+    margin-top: 8px;
+  }
 
-Screen OCR
-Screen Translation Feature
-When you tap the screen translation icon in the toolbar, the app requests Android's official screen capture permission (MediaProjection) via a system dialog shown to you. A persistent notification with a stop button is displayed throughout the entire session — the session never starts without a visible notification.
+  .contact-box p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+  }
 
-A screen frame is captured only on your explicit request; no automatic capturing occurs.
-Text is analysed locally on your device using the Tesseract OCR library — no internet connection required.
-No screen content is ever sent to any external server.
-The session ends immediately when you tap the stop button in the notification or from within the app.
-The SYSTEM_ALERT_WINDOW permission (draw over other apps) is used solely to display the translation result as a floating overlay — it is not used for any other purpose.
+  /* ── الفوتر ── */
+  footer {
+    text-align: center;
+    padding: 48px 24px 60px;
+    border-top: 1px solid #e8e8e8;
+  }
 
-Advertising
-Advertising (AdMob)
-The free version displays ads via Google AdMob. This service may collect device data to show relevant ads in accordance with Google's Privacy Policy. You can opt out of personalised ads from: Settings → Google → Ads.
+  footer p {
+    font-family: 'Caveat', cursive;
+    font-size: 16px;
+    color: #ccc;
+    margin: 0;
+  }
 
-Contact
-Contact Us
-If you have any questions about this policy, you can reach us through the app's page on Google Play.
+  /* ── RTL / LTR ── */
+  [dir="rtl"] { direction: rtl; text-align: right; }
+  .en         { direction: ltr; text-align: left; }
 
-Reverse Keyboard · Privacy Policy · 2026
+  @media (max-width: 600px) {
+    .page { padding: 60px 20px; }
+    .cover { padding: 48px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ════════ COVER ════════ -->
+<div class="cover">
+  <div class="cover-inner">
+    <p class="cover-label">Reverse Keyboard</p>
+    <h1 class="cover-title">سياسة<br>الخصوصية</h1>
+    <p class="cover-subtitle">Privacy Policy</p>
+    <div class="cover-line"></div>
+    <p class="cover-date">آخر تحديث — Last updated: May 2026</p>
+  </div>
+</div>
+
+
+<!-- ════════ ARABIC ════════ -->
+<div dir="rtl">
+
+<div class="page">
+  <span class="section-eyebrow">مقدمة</span>
+  <h2>من نحن</h2>
+  <p>
+    تطبيق Reverse Keyboard هو لوحة مفاتيح عربية تعمل على أجهزة Android.
+    نحن نحترم خصوصيتك ونلتزم بحمايتها. توضّح هذه السياسة ما نجمعه وما لا نجمعه.
+  </p>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">البيانات</span>
+  <h2>ما الذي لا نجمعه</h2>
+  <ul>
+    <li>لا نجمع أي نص تكتبه على لوحة المفاتيح.</li>
+    <li>لا نخزّن كلمات المرور أو البيانات الحساسة.</li>
+    <li>لا نرسل بياناتك الشخصية لأي طرف ثالث.</li>
+    <li>لا نستخدم أي أداة تتبع أو إحصاءات مستخدمين.</li>
+  </ul>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">الترجمة النصية</span>
+  <h2>ميزة الترجمة النصية</h2>
+  <p>
+    عند الضغط على زر الترجمة في شريط الأدوات، يُرسل النص الذي تحدده
+    إلى خدمات ترجمة مجانية ومفتوحة المصدر.
+    التطبيق يجرّب الخدمات بالترتيب التالي حتى ينجح أحدها:
+  </p>
+  <ul>
+    <li><strong>MyMemory</strong> — api.mymemory.translated.net</li>
+    <li><strong>LibreTranslate</strong> — libretranslate.com و translate.argosopentech.com</li>
+    <li><strong>Apertium</strong> — apertium.org</li>
+  </ul>
+  <p>
+    هذه الخدمات لها سياسات خصوصية مستقلة.
+    لا يُرسل أي نص دون إجراء صريح منك.
+  </p>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">الصوت</span>
+  <h2>ميزة الترجمة بالصوت</h2>
+  <p>
+    عند تفعيل ميزة "الترجمة بالصوت" والضغط على زر الميكروفون،
+    يُعالَج الكلام محلياً عبر نظام Android للتعرف على الصوت،
+    ثم إذا اكتشف التطبيق أن لغة الكلام تختلف عن لغة الكيبورد،
+    يُرسل النص المُعرَّف إلى إحدى خدمات الترجمة أعلاه.
+  </p>
+  <p>
+    يمكنك إيقاف هذه الميزة من إعدادات التطبيق ← الترجمة بالصوت ← OFF.
+    عند إيقافها، يُكتب الكلام مباشرة بدون أي إرسال لخوادم خارجية.
+  </p>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">الأذونات</span>
+  <h2>إذن الميكروفون</h2>
+  <p>
+    يُستخدم الميكروفون فقط عند الضغط على زر الإدخال الصوتي.
+    لا يُسجَّل الصوت أو يُخزَّن، بل يُعالَج مباشرةً بواسطة
+    خدمة التعرف على الكلام في جهازك (Google Speech).
+  </p>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">الأذونات</span>
+  <h2>إذن الصور والفيديو</h2>
+  <p>
+    يُستخدم للسماح لك باختيار صورة أو فيديو لتعيينه خلفيةً للوحة المفاتيح.
+    الملفات تبقى على جهازك ولا تُرفع لأي خادم.
+  </p>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">الخصوصية</span>
+  <h2>حقول كلمة المرور</h2>
+  <p>
+    عند الكتابة في حقول كلمة المرور، يتوقف التطبيق تلقائياً عن
+    عرض الاقتراحات أو تخزين أي نص.
+  </p>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">الحافظة</span>
+  <h2>الحافظة (Clipboard)</h2>
+  <p>
+    يراقب التطبيق الحافظة لعرض زر اللصق السريع في شريط الأدوات.
+    آخر نص تم نسخه يُخزَّن محلياً على جهازك فقط ولا يُرسل لأي خادم خارجي.
+    لا يتم الوصول إلى الحافظة إلا عند فتح لوحة المفاتيح.
+  </p>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">معرّف الجهاز</span>
+  <h2>معرّف الجهاز (ANDROID_ID)</h2>
+  <p>
+    يستخدم التطبيق معرّف الجهاز للتحقق من صلاحيات المستخدم داخل التطبيق.
+    لا يُرسل هذا المعرّف ولا يُخزَّن على أي خادم خارجي.
+  </p>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">ترجمة الشاشة</span>
+  <h2>ميزة ترجمة الشاشة (Screen OCR)</h2>
+  <p>
+    عند الضغط على أيقونة ترجمة الشاشة في شريط الأدوات، يطلب التطبيق إذن النظام الرسمي
+    لالتقاط الشاشة (<strong>MediaProjection</strong>) عبر حوار النظام الظاهر للمستخدم.
+    يظهر إشعار دائم وزر إيقاف طوال مدة الجلسة، ولا تبدأ الجلسة أبداً بلا إشعار ظاهر.
+  </p>
+  <ul>
+    <li>يُلتقط إطار الشاشة لحظياً فقط عند طلبك الصريح، ولا يحدث التقاط تلقائي.</li>
+    <li>يُحلَّل النص محلياً على جهازك باستخدام مكتبة <strong>Tesseract</strong> للتعرف الضوئي على النصوص — بدون إنترنت.</li>
+    <li>لا يُرسل أي محتوى من الشاشة إلى أي خادم خارجي.</li>
+    <li>تنتهي الجلسة فور ضغطك على زر الإيقاف في الإشعار أو من داخل التطبيق.</li>
+  </ul>
+  <p>
+    يُستخدم إذن <strong>SYSTEM_ALERT_WINDOW</strong> (النافذة العائمة) لعرض نتيجة الترجمة
+    فوق التطبيقات الأخرى فقط، ولا يُستخدم لأي غرض آخر.
+  </p>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">الإعلانات</span>
+  <h2>الإعلانات (AdMob)</h2>
+  <p>
+    النسخة المجانية تعرض إعلانات عبر <strong>Google AdMob</strong>.
+    قد تجمع هذه الخدمة بيانات جهازك لعرض إعلانات مناسبة وفق
+    <a href="https://policies.google.com/privacy">سياسة خصوصية Google</a>.
+    يمكنك إيقاف تخصيص الإعلانات من: الإعدادات ← Google ← الإعلانات.
+  </p>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">تواصل معنا</span>
+  <h2>التواصل</h2>
+  <div class="contact-box">
+    <p>
+      إذا كانت لديك أي أسئلة حول هذه السياسة،
+      يمكنك التواصل معنا عبر صفحة التطبيق على Google Play.
+    </p>
+  </div>
+</div>
+
+</div><!-- /rtl -->
+
+
+<!-- ════════ DIVIDER ════════ -->
+<div class="lang-divider">
+  <span class="lang-divider-text">English Version</span>
+</div>
+
+
+<!-- ════════ ENGLISH ════════ -->
+<div class="en">
+
+<div class="page">
+  <span class="section-eyebrow">Introduction</span>
+  <h2>About This Policy</h2>
+  <p>
+    Reverse Keyboard is an Arabic keyboard application for Android devices.
+    We respect and are committed to protecting your privacy. This policy explains what we collect and what we do not collect.
+  </p>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">Data</span>
+  <h2>What We Do Not Collect</h2>
+  <ul>
+    <li>We do not collect any text you type on the keyboard.</li>
+    <li>We do not store passwords or sensitive data.</li>
+    <li>We do not send your personal data to any third party.</li>
+    <li>We do not use any tracking tools or user analytics.</li>
+  </ul>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">Translation</span>
+  <h2>Text Translation Feature</h2>
+  <p>
+    When you tap the translate button in the toolbar, the text you select is sent
+    to free, open-source translation services.
+    The app tries the following services in order until one succeeds:
+  </p>
+  <ul>
+    <li><strong>MyMemory</strong> — api.mymemory.translated.net</li>
+    <li><strong>LibreTranslate</strong> — libretranslate.com and translate.argosopentech.com</li>
+    <li><strong>Apertium</strong> — apertium.org</li>
+  </ul>
+  <p>
+    These services have their own independent privacy policies.
+    No text is sent without an explicit action from you.
+  </p>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">Voice</span>
+  <h2>Voice Translation Feature</h2>
+  <p>
+    When the "Voice Translation" feature is enabled and you tap the microphone button,
+    your speech is processed locally via Android's speech recognition system.
+    If the app detects that the spoken language differs from the keyboard language,
+    the recognised text is sent to one of the translation services above.
+  </p>
+  <p>
+    You can disable this feature from the app settings → Voice Translation → OFF.
+    When disabled, speech is typed directly without any data being sent to external servers.
+  </p>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">Permissions</span>
+  <h2>Microphone Permission</h2>
+  <p>
+    The microphone is used only when you tap the voice input button.
+    Audio is not recorded or stored — it is processed directly by
+    your device's speech recognition service (Google Speech).
+  </p>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">Permissions</span>
+  <h2>Photos &amp; Video Permission</h2>
+  <p>
+    Used to allow you to select an image or video to set as the keyboard background.
+    Files remain on your device and are not uploaded to any server.
+  </p>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">Privacy</span>
+  <h2>Password Fields</h2>
+  <p>
+    When typing in password fields, the app automatically stops
+    displaying suggestions or storing any text.
+  </p>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">Clipboard</span>
+  <h2>Clipboard</h2>
+  <p>
+    The app monitors the clipboard to display a quick-paste button in the toolbar.
+    The last copied text is stored locally on your device only and is not sent to any external server.
+    The clipboard is only accessed when the keyboard is open.
+  </p>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">Device Identifier</span>
+  <h2>Device Identifier (ANDROID_ID)</h2>
+  <p>
+    The app uses the device identifier to verify user permissions within the app.
+    This identifier is never sent to or stored on any external server.
+  </p>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">Screen OCR</span>
+  <h2>Screen Translation Feature</h2>
+  <p>
+    When you tap the screen translation icon in the toolbar, the app requests Android's official
+    screen capture permission (<strong>MediaProjection</strong>) via a system dialog shown to you.
+    A persistent notification with a stop button is displayed throughout the entire session —
+    the session never starts without a visible notification.
+  </p>
+  <ul>
+    <li>A screen frame is captured only on your explicit request; no automatic capturing occurs.</li>
+    <li>Text is analysed locally on your device using the <strong>Tesseract</strong> OCR library — no internet connection required.</li>
+    <li>No screen content is ever sent to any external server.</li>
+    <li>The session ends immediately when you tap the stop button in the notification or from within the app.</li>
+  </ul>
+  <p>
+    The <strong>SYSTEM_ALERT_WINDOW</strong> permission (draw over other apps) is used solely
+    to display the translation result as a floating overlay — it is not used for any other purpose.
+  </p>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">Advertising</span>
+  <h2>Advertising (AdMob)</h2>
+  <p>
+    The free version displays ads via <strong>Google AdMob</strong>.
+    This service may collect device data to show relevant ads in accordance with
+    <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.
+    You can opt out of personalised ads from: Settings → Google → Ads.
+  </p>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">Contact</span>
+  <h2>Contact Us</h2>
+  <div class="contact-box">
+    <p>
+      If you have any questions about this policy,
+      you can reach us through the app's page on Google Play.
+    </p>
+  </div>
+</div>
+
+</div><!-- /en -->
+
+
+<!-- ════════ FOOTER ════════ -->
+<footer>
+  <p>Reverse Keyboard · Privacy Policy · 2026</p>
+</footer>
+
+</body>
+</html>
