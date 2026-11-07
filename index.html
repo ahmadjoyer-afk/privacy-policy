@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy — Reverse Keyboard</title>
+<title>Privacy Policy — KeySnatcher (Khatef Keyboard)</title>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Tajawal:wght@300;400;500&family=Lato:wght@300;400&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -16,7 +16,7 @@
     line-height: 1.9;
   }
 
-  /* ── صفحة الغلاف ── */
+  /* ── Cover page ── */
   .cover {
     min-height: 100vh;
     display: flex;
@@ -47,6 +47,7 @@
   .cover-inner {
     position: relative;
     text-align: center;
+    max-width: 100%;
   }
 
   .cover-label {
@@ -87,7 +88,7 @@
     letter-spacing: 1px;
   }
 
-  /* ── الصفحات ── */
+  /* ── Pages ── */
   .page {
     max-width: 720px;
     margin: 0 auto;
@@ -99,7 +100,7 @@
     border-top: 1px solid #e8e8e8;
   }
 
-  /* ── عنوان القسم ── */
+  /* ── Section heading ── */
   .section-eyebrow {
     font-family: 'Caveat', cursive;
     font-size: 13px;
@@ -173,9 +174,10 @@
     color: #111;
     text-decoration: underline;
     text-underline-offset: 3px;
+    overflow-wrap: anywhere;
   }
 
-  /* ── فاصل اللغتين ── */
+  /* ── Language divider ── */
   .lang-divider {
     display: flex;
     align-items: center;
@@ -200,7 +202,7 @@
     white-space: nowrap;
   }
 
-  /* ── قسم التواصل ── */
+  /* ── Contact box ── */
   .contact-box {
     background: #f0f0f0;
     border-radius: 4px;
@@ -214,7 +216,11 @@
     color: #555;
   }
 
-  /* ── الفوتر ── */
+  .contact-box p + p {
+    margin-top: 10px;
+  }
+
+  /* ── Footer ── */
   footer {
     text-align: center;
     padding: 48px 24px 60px;
@@ -231,10 +237,12 @@
   /* ── RTL / LTR ── */
   [dir="rtl"] { direction: rtl; text-align: right; }
   .en         { direction: ltr; text-align: left; }
+  bdi, .ltr   { unicode-bidi: isolate; }
 
   @media (max-width: 600px) {
     .page { padding: 60px 20px; }
     .cover { padding: 48px 20px; }
+    .contact-box { padding: 22px 20px; }
   }
 </style>
 </head>
@@ -243,11 +251,11 @@
 <!-- ════════ COVER ════════ -->
 <div class="cover">
   <div class="cover-inner">
-    <p class="cover-label">Reverse Keyboard</p>
+    <p class="cover-label">KeySnatcher · Khatef Keyboard</p>
     <h1 class="cover-title">سياسة<br>الخصوصية</h1>
     <p class="cover-subtitle">Privacy Policy</p>
     <div class="cover-line"></div>
-    <p class="cover-date">آخر تحديث — Last updated: May 2026</p>
+    <p class="cover-date">آخر تحديث: نوفمبر 2026 — Last updated: November 2026 · v8.23</p>
   </div>
 </div>
 
@@ -259,38 +267,89 @@
   <span class="section-eyebrow">مقدمة</span>
   <h2>من نحن</h2>
   <p>
-    تطبيق Reverse Keyboard هو لوحة مفاتيح عربية تعمل على أجهزة Android.
-    نحن نحترم خصوصيتك ونلتزم بحمايتها. توضّح هذه السياسة ما نجمعه وما لا نجمعه.
+    توضّح هذه السياسة كيف يتعامل تطبيق <strong>«KeySnatcher: Arabic Keyboard»</strong> المنشور على Google Play،
+    والذي يظهر داخل التطبيق باسم <strong>«خاطف كيبورد» (Khatef Keyboard)</strong>، مع بياناتك.
+    التطبيق لوحة مفاتيح لأجهزة Android، وله نسختان تنطبق عليهما هذه السياسة:
   </p>
+  <ul>
+    <li>النسخة المجانية: <bdi>com.khattef.keyboard.free</bdi></li>
+    <li>نسخة Pro: <bdi>com.khattef.keyboard</bdi></li>
+  </ul>
+  <p>
+    المطوّر والمسؤول عن معالجة بياناتك: <strong>احمد وقطع</strong>.
+    للتواصل بشأن الخصوصية: <a href="mailto:ahmadjoyer@gmail.com">ahmadjoyer@gmail.com</a>.
+  </p>
+  <p>
+    ما يرد في هذه السياسة ينطبق على النسختين، إلا ما نصّ صراحةً على أنه خاص بإحداهما.
+  </p>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">اللغات</span>
+  <h2>اللغات المدعومة</h2>
+  <p>
+    صُمِّم التطبيق أساساً للغتين <strong>العربية والإنجليزية</strong>، وهما <strong>اللغتان الوحيدتان المدعومتان رسمياً</strong>.
+    واجهة التطبيق ولوحات المفاتيح المدمجة والتعليمات وهذه السياسة متاحة بهاتين اللغتين.
+  </p>
+  <p>
+    قد تتوفّر لغات أخرى في بعض الميزات أو عبر خدمات خارجية، مثل الترجمة، والإدخال الصوتي، والتعرّف على نص الشاشة،
+    أو تخطيطات لوحة مفاتيح تستوردها بنفسك. هذه اللغات <strong>غير مدعومة رسمياً</strong>، وقد يختلف توفّرها وجودة عملها،
+    ولا نضمن توافقها الكامل. ولا يعني توفّر لغة ما في ميزة معيّنة أن التطبيق بأكمله يدعمها رسمياً.
+  </p>
+  <p>
+    عند استخدام لغة أخرى في ميزة تعتمد على خدمة خارجية، تُعالَج البيانات بالطريقة الموضّحة لتلك الميزة في هذه السياسة.
+  </p>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">ملخّص</span>
+  <h2>باختصار</h2>
+  <ul>
+    <li>ما تكتبه يُعالَج على جهازك. لا نشغّل خوادم تستقبل نصّك أو تخزّنه، ولا نبيع بياناتك.</li>
+    <li>لا يخرج نصّ من جهازك إلا حين تستخدم ميزة تحتاج إلى الإنترنت: الترجمة عبر الإنترنت، أو المساعد الذكي، أو جسر الحاسوب.</li>
+    <li>إحصاءات الاستخدام مُطفأة افتراضياً، ولا تعمل إلا إذا شغّلتها بنفسك.</li>
+    <li>النسخة المجانية تعرض إعلانات من Google AdMob، ونسخة Pro بلا إعلانات.</li>
+    <li>لا يوجد حساب، ولا نطلب اسمك أو بريدك الإلكتروني أو رقم هاتفك.</li>
+  </ul>
 </div>
 
 <div class="page">
   <span class="section-eyebrow">البيانات</span>
-  <h2>ما الذي لا نجمعه</h2>
+  <h2>البيانات التي تبقى على جهازك</h2>
   <ul>
-    <li>لا نجمع أي نص تكتبه على لوحة المفاتيح.</li>
-    <li>لا نخزّن كلمات المرور أو البيانات الحساسة.</li>
-    <li>لا نرسل بياناتك الشخصية لأي طرف ثالث.</li>
-    <li>لا نستخدم أي أداة تتبع أو إحصاءات مستخدمين.</li>
+    <li>ما تكتبه، واقتراحات الكلمات، والتدقيق الإملائي، وسجلّ التراجع.</li>
+    <li>اختصاراتك وإعداداتك وتصاميمك.</li>
+    <li>عناصر الحافظة وخزائنها.</li>
+    <li>القراءة الصوتية، إذ تستخدم محرّك تحويل النص إلى كلام المثبّت على جهازك.</li>
   </ul>
+  <p>
+    لا تُرفع هذه البيانات إلى أي خادم. والنسخ الاحتياطي التلقائي لبيانات التطبيق مُعطَّل،
+    فلا تُنسخ إلى حسابك السحابي ولا تُنقل إلى جهاز آخر.
+  </p>
 </div>
 
 <div class="page">
-  <span class="section-eyebrow">الترجمة النصية</span>
+  <span class="section-eyebrow">الترجمة</span>
   <h2>ميزة الترجمة النصية</h2>
   <p>
-    عند الضغط على زر الترجمة في شريط الأدوات، يُرسل النص الذي تحدده
-    إلى خدمات ترجمة مجانية ومفتوحة المصدر.
-    التطبيق يجرّب الخدمات بالترتيب التالي حتى ينجح أحدها:
+    عند طلبك ترجمة نصٍّ من شريط الأدوات، يُترجَم على جهازك باستخدام <strong>Google ML Kit</strong> متى أمكن،
+    ولا يُرسل شيء حينها. وقد تُنزَّل ملفات اللغات اللازمة من Google في المرة الأولى.
+  </p>
+  <p>
+    وفي غير ذلك يُرسل النص الذي طلبت ترجمته فقط، مع لغة المصدر ولغة الهدف، إلى خدمات ترجمة عبر الإنترنت.
+    وللحصول على النتيجة بسرعة، قد يُرسل إلى أكثر من خدمة في الوقت نفسه:
   </p>
   <ul>
-    <li><strong>MyMemory</strong> — api.mymemory.translated.net</li>
-    <li><strong>LibreTranslate</strong> — libretranslate.com و translate.argosopentech.com</li>
-    <li><strong>Apertium</strong> — apertium.org</li>
+    <li><strong>Google Translate</strong> (Google)</li>
+    <li><strong>Lingva</strong> — <bdi>lingva.ml</bdi> و<bdi>translate.plausibility.cloud</bdi> و<bdi>lingva.tiekoetter.com</bdi>، وهي تمرّر النص إلى Google Translate</li>
+    <li><strong>MyMemory</strong> (Translated) — <bdi>api.mymemory.translated.net</bdi></li>
+    <li><strong>LibreTranslate</strong> — <bdi>libretranslate.com</bdi> و<bdi>translate.argosopentech.com</bdi></li>
+    <li><strong>Apertium</strong> — <bdi>apertium.org</bdi></li>
   </ul>
   <p>
-    هذه الخدمات لها سياسات خصوصية مستقلة.
-    لا يُرسل أي نص دون إجراء صريح منك.
+    بعض هذه الخدمات مستقلّة أو يديرها متطوّعون، ولكلٍّ منها شروطها وسياسة خصوصيتها، ولا يربطنا بها أي عقد.
+    لا يُرسل أي نص دون إجراء صريح منك. ونرجو ألّا تترجم عبر الإنترنت معلومات حسّاسة،
+    مثل كلمات المرور أو البيانات الصحية أو المالية أو بيانات الهوية.
   </p>
 </div>
 
@@ -298,14 +357,11 @@
   <span class="section-eyebrow">الصوت</span>
   <h2>ميزة الترجمة بالصوت</h2>
   <p>
-    عند تفعيل ميزة "الترجمة بالصوت" والضغط على زر الميكروفون،
-    يُعالَج الكلام محلياً عبر نظام Android للتعرف على الصوت،
-    ثم إذا اكتشف التطبيق أن لغة الكلام تختلف عن لغة الكيبورد،
-    يُرسل النص المُعرَّف إلى إحدى خدمات الترجمة أعلاه.
+    عند تفعيل «الترجمة بالصوت» والضغط على زر الميكروفون، يُحوَّل كلامك إلى نص عبر خدمة التعرّف على الكلام في جهازك،
+    ثم يُترجم النص المُعرَّف بالطريقة الموضّحة في قسم الترجمة النصية.
   </p>
   <p>
-    يمكنك إيقاف هذه الميزة من إعدادات التطبيق ← الترجمة بالصوت ← OFF.
-    عند إيقافها، يُكتب الكلام مباشرة بدون أي إرسال لخوادم خارجية.
+    يمكنك إيقاف هذه الميزة من إعدادات التطبيق في أي وقت. وعند إيقافها يُكتب الكلام مباشرةً دون ترجمة.
   </p>
 </div>
 
@@ -313,18 +369,19 @@
   <span class="section-eyebrow">الأذونات</span>
   <h2>إذن الميكروفون</h2>
   <p>
-    يُستخدم الميكروفون فقط عند الضغط على زر الإدخال الصوتي.
-    لا يُسجَّل الصوت أو يُخزَّن، بل يُعالَج مباشرةً بواسطة
-    خدمة التعرف على الكلام في جهازك (Google Speech).
+    لا يُستخدم الميكروفون إلا بعد ضغطك على زر الإدخال الصوتي.
+    يُحوَّل الكلام إلى نص عبر خدمة التعرّف على الكلام في جهازك (مثل خدمة Google)،
+    وقد تعالجه تلك الخدمة على خوادمها وفق سياسة الخصوصية الخاصة بها.
+    لا يسجّل التطبيق الصوت ولا يخزّنه.
   </p>
 </div>
 
 <div class="page">
-  <span class="section-eyebrow">الأذونات</span>
-  <h2>إذن الصور والفيديو</h2>
+  <span class="section-eyebrow">الخلفيات</span>
+  <h2>الصور والفيديوهات</h2>
   <p>
-    يُستخدم للسماح لك باختيار صورة أو فيديو لتعيينه خلفيةً للوحة المفاتيح.
-    الملفات تبقى على جهازك ولا تُرفع لأي خادم.
+    يمكنك اختيار صورة أو فيديو ليكون خلفيةً للوحة المفاتيح عبر أداة الاختيار في نظام Android،
+    فيصل التطبيق إلى الملف الذي تختاره أنت فقط. تبقى الملفات على جهازك ولا تُرفع إلى أي خادم.
   </p>
 </div>
 
@@ -332,8 +389,7 @@
   <span class="section-eyebrow">الخصوصية</span>
   <h2>حقول كلمة المرور</h2>
   <p>
-    عند الكتابة في حقول كلمة المرور، يتوقف التطبيق تلقائياً عن
-    عرض الاقتراحات أو تخزين أي نص.
+    عند الكتابة في حقول كلمة المرور، لا تعرض لوحة المفاتيح أي اقتراحات ولا تحفظ أي نص.
   </p>
 </div>
 
@@ -341,40 +397,200 @@
   <span class="section-eyebrow">الحافظة</span>
   <h2>الحافظة (Clipboard)</h2>
   <p>
-    يراقب التطبيق الحافظة لعرض زر اللصق السريع في شريط الأدوات.
-    آخر نص تم نسخه يُخزَّن محلياً على جهازك فقط ولا يُرسل لأي خادم خارجي.
-    لا يتم الوصول إلى الحافظة إلا عند فتح لوحة المفاتيح.
+    تقرأ لوحة المفاتيح الحافظة ما دامت مفتوحة فقط، لتعرض عليك اللصق السريع في شريط الأدوات.
+    تُحفظ عناصر الحافظة وخزائنها على جهازك فقط، ولا تُرسل إلى أي خادم خارجي.
   </p>
 </div>
 
 <div class="page">
   <span class="section-eyebrow">ترجمة الشاشة</span>
-  <h2>ميزة ترجمة الشاشة (Screen OCR)</h2>
+  <h2>ترجمة الشاشة ونسخ نصّها</h2>
   <p>
-    عند الضغط على أيقونة ترجمة الشاشة في شريط الأدوات، يطلب التطبيق إذن النظام الرسمي
-    لالتقاط الشاشة (<strong>MediaProjection</strong>) عبر حوار النظام الظاهر للمستخدم.
-    يظهر إشعار دائم وزر إيقاف طوال مدة الجلسة، ولا تبدأ الجلسة أبداً بلا إشعار ظاهر.
+    لا تعمل هاتان الميزتان إلا حين تبدأهما بنفسك. يطلب التطبيق حينها إذن التقاط الشاشة الرسمي في Android
+    (<strong>MediaProjection</strong>) عبر نافذة النظام، ويعرض Android إشعاراً ظاهراً طوال مدة الجلسة.
   </p>
   <ul>
-    <li>يُلتقط إطار الشاشة لحظياً فقط عند طلبك الصريح، ولا يحدث التقاط تلقائي.</li>
-    <li>يُحلَّل النص محلياً على جهازك باستخدام مكتبة <strong>Tesseract</strong> للتعرف الضوئي على النصوص — بدون إنترنت.</li>
-    <li>لا يُرسل أي محتوى من الشاشة إلى أي خادم خارجي.</li>
-    <li>تنتهي الجلسة فور ضغطك على زر الإيقاف في الإشعار أو من داخل التطبيق.</li>
+    <li>تُقرأ صورة الشاشة على جهازك باستخدام <strong>Google ML Kit</strong> و<strong>Tesseract</strong>، ولا تُرفع إلى أي خادم.</li>
+    <li>قد تنزّل خدمات Google Play على جهازك نماذج التعرّف على النص.</li>
+    <li>لا يُترجم إلا النص المُعرَّف، بالطريقة الموضّحة في قسم الترجمة النصية.</li>
+    <li>تنتهي الجلسة فور إيقافها من الإشعار أو من داخل التطبيق.</li>
   </ul>
   <p>
-    يُستخدم إذن <strong>SYSTEM_ALERT_WINDOW</strong> (النافذة العائمة) لعرض نتيجة الترجمة
-    فوق التطبيقات الأخرى فقط، ولا يُستخدم لأي غرض آخر.
+    يُستخدم إذن <strong>العرض فوق التطبيقات الأخرى</strong> لإظهار الأيقونات والنوافذ العائمة
+    (مثل نتيجة الترجمة والمساعد الذكي) فقط، ولا يُستخدم لأي غرض آخر.
+  </p>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">الذكاء الاصطناعي</span>
+  <h2>المساعد الذكي والرد التلقائي (تجريبي)</h2>
+  <p>
+    هاتان الميزتان تجريبيتان، وقد لا تعملان دائماً كما هو متوقّع، ولا تعملان إلا إذا شغّلتهما بنفسك.
+  </p>
+  <ul>
+    <li><strong>المساعد الذكي:</strong> يفتح الموقع الرسمي لخدمة الذكاء الاصطناعي التي تختارها داخل نافذة في التطبيق:
+      ChatGPT (OpenAI) أو Gemini (Google) أو Claude (Anthropic) أو Copilot (Microsoft) أو DeepSeek.
+      تسجّل الدخول في ذلك الموقع بحسابك الخاص، وما ترسله هناك يصل مباشرةً إلى تلك الخدمة وتعالجه وفق شروطها وسياسة خصوصيتها.
+      لا نتلقّى كلمة مرورك ولا محادثاتك، وتُحفظ ملفات تعريف الارتباط الخاصة بتسجيل الدخول على جهازك.</li>
+    <li><strong>الرد التلقائي:</strong> عند نسخك نصاً، يفتح المساعد وفيه ذلك النص في خانة الرسالة.
+      ولا يُرسل شيء حتى تضغط أنت على زر الإرسال.</li>
+  </ul>
+  <p>
+    لسنا تابعين لأي من هذه الخدمات، وتُذكر أسماؤها فقط لبيان ما يعمل التطبيق معه.
+  </p>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">جسر الحاسوب</span>
+  <h2>جسر الحاسوب (PC Bridge)</h2>
+  <p>
+    عند ربط هاتفك بحاسوبك الذي يعمل بنظام Windows، يُرسل ما تكتبه مباشرةً إلى ذلك الحاسوب
+    عبر شبكة Wi-Fi المحلية أو كابل USB. الاتصال مشفّر من طرف إلى طرف، ولا يمرّ عبر خوادمنا أو أي خادم آخر.
+  </p>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">الإحصاءات</span>
+  <h2>إحصاءات الاستخدام (اختيارية)</h2>
+  <p>
+    يستخدم التطبيق <strong>Google Analytics for Firebase</strong>، وهي <strong>مُطفأة افتراضياً</strong>،
+    ولا تعمل إلا إذا شغّلتها من الصفحة 1 ← خيارات الخصوصية. يمكنك إيقافها في أي وقت،
+    وإيقافها يحذف أيضاً معرّف الإحصاءات من جهازك.
+  </p>
+  <p>
+    حين تكون مُشغّلة، تجمع Google: أحداث استخدام تُسجَّل تلقائياً (مثل فتح التطبيق ومدة الجلسة)،
+    ومعلومات الجهاز والتطبيق (الطراز وإصدار Android واللغة وإصدار التطبيق)، ومعرّفاً عشوائياً لنسخة التطبيق،
+    وطريقة تثبيت التطبيق، وموقعاً تقريبياً يُستنتج من عنوان IP (وليس من GPS).
+    لا تتضمّن أبداً ما تكتبه، ولا يُجمع المعرّف الإعلاني لأغراض الإحصاءات.
+  </p>
+  <p>
+    الغرض: فهم طريقة استخدام التطبيق وتحسينه. الأساس القانوني: موافقتك، ويمكنك سحبها في أي وقت.
+  </p>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">الأمان</span>
+  <h2>فحص أمان التطبيق</h2>
+  <p>
+    لحماية المستخدمين من النسخ المعدّلة أو غير الرسمية، يتحقّق التطبيق على جهازك من توقيعه ومن مصدر تثبيته.
+    كما يستعين بخدمة <strong>Firebase App Check</strong> مع <strong>Play Integrity</strong> من Google
+    للتحقّق من أن التطبيق والجهاز أصليّان. ولهذا الغرض تتلقّى Google معلومات عن التطبيق والجهاز وحالة سلامته،
+    وفق سياسة الخصوصية الخاصة بها. لا يشمل ذلك أي نص تكتبه.
+  </p>
+  <p>
+    الأساس القانوني: مصلحتنا المشروعة في الحفاظ على أمان التطبيق ومستخدميه.
   </p>
 </div>
 
 <div class="page">
   <span class="section-eyebrow">الإعلانات</span>
-  <h2>الإعلانات (AdMob)</h2>
+  <h2>الإعلانات (AdMob) — النسخة المجانية فقط</h2>
   <p>
-    النسخة المجانية تعرض إعلانات عبر <strong>Google AdMob</strong>.
-    قد تجمع هذه الخدمة بيانات جهازك لعرض إعلانات مناسبة وفق
-    <a href="https://policies.google.com/privacy">سياسة خصوصية Google</a>.
-    يمكنك إيقاف تخصيص الإعلانات من: الإعدادات ← Google ← الإعلانات.
+    تعرض النسخة المجانية إعلانات من <strong>Google AdMob</strong>: إعلانات بملء الشاشة تظهر أحياناً عند التنقّل بين الصفحات
+    أو بعد عدد من عمليات العكس، وإعلانات بمكافأة تختار مشاهدتها بنفسك لفتح بعض الميزات لمدة محدودة.
+  </p>
+  <ul>
+    <li><strong>الموافقة:</strong> في المنطقة الاقتصادية الأوروبية والمملكة المتحدة وسويسرا، يُعرض نموذج الموافقة من Google قبل طلب أي إعلان،
+      ولا تبدأ خدمة الإعلانات قبل توفّر قرار الموافقة. يمكنك تغيير اختيارك لاحقاً من الصفحة 1 ← خيارات الخصوصية ← خيارات الإعلانات، حيث ينطبق ذلك.</li>
+    <li><strong>ما يجمعه AdMob:</strong> المعرّف الإعلاني لجهازك، وعنوان IP، ومعلومات الجهاز، وتفاعلك مع الإعلانات.
+      تستخدمها Google لعرض الإعلانات وتحديد تكرارها وقياسها ومنع الاحتيال، ولتخصيص الإعلانات فقط حيث توافق على ذلك.
+      راجع <a href="https://policies.google.com/technologies/partner-sites">كيف تستخدم Google المعلومات من التطبيقات التي تستخدم خدماتها</a>
+      و<a href="https://policies.google.com/privacy">سياسة خصوصية Google</a>.</li>
+    <li><strong>تحكّمك:</strong> يمكنك إعادة ضبط المعرّف الإعلاني أو حذفه من إعدادات جهازك (Google ← الإعلانات).</li>
+    <li><strong>الأساس القانوني:</strong> موافقتك حيث يشترطها القانون (المنطقة الاقتصادية الأوروبية والمملكة المتحدة وسويسرا)،
+      وفي غير ذلك مصلحتنا المشروعة في تمويل النسخة المجانية.</li>
+  </ul>
+  <p>
+    <strong>نسخة Pro:</strong> بلا إعلانات. لا تعمل فيها خدمة الإعلانات، ولا تتضمّن إذن المعرّف الإعلاني، ولا يُعرض فيها نموذج موافقة إعلانية.
+    ونسخة Pro تطبيق مستقل على Google Play، ولا تُنقل إليها إعدادات النسخة المجانية.
+  </p>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">الأذونات</span>
+  <h2>الأذونات وسبب استخدامها</h2>
+  <ul>
+    <li><strong>الميكروفون:</strong> الإدخال الصوتي، فقط بعد ضغطك على الزر.</li>
+    <li><strong>العرض فوق التطبيقات الأخرى:</strong> الأيقونات والنوافذ العائمة (الترجمة والمساعد الذكي).</li>
+    <li><strong>التقاط الشاشة (خدمة في المقدّمة):</strong> ترجمة الشاشة ونسخ نصّها، فقط حين تبدأهما.</li>
+    <li><strong>خدمة في المقدّمة (مزامنة البيانات):</strong> إبقاء جسر الحاسوب متصلاً أثناء استخدامك له.</li>
+    <li><strong>الإشعارات:</strong> الإشعار الذي يظهر أثناء عمل هذه الميزات.</li>
+    <li><strong>الإنترنت وحالة الشبكة وWi-Fi:</strong> الميزات المتصلة بالإنترنت المذكورة أعلاه، وجسر الحاسوب، والإعلانات في النسخة المجانية.</li>
+    <li><strong>الاهتزاز:</strong> الاستجابة اللمسية عند الضغط على المفاتيح.</li>
+  </ul>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">المشاركة</span>
+  <h2>من يتلقّى البيانات والنقل الدولي</h2>
+  <p>
+    لا تُرسل البيانات إلا إلى الخدمات المذكورة في هذه السياسة، وللغرض الموضّح لكلٍّ منها فقط. ولا نبيع بياناتك.
+  </p>
+  <p>
+    تعالج Google وعدد من خدمات الترجمة والذكاء الاصطناعي البيانات خارج بلدك، بما في ذلك الولايات المتحدة.
+    وفيما يخص النقل من الاتحاد الأوروبي والمملكة المتحدة، تعتمد Google على ضمانات معترف بها،
+    مثل إطار خصوصية البيانات بين الاتحاد الأوروبي والولايات المتحدة والبنود التعاقدية القياسية.
+    أما خدمات الترجمة المستقلة فقد تكون في أي مكان، ولا نستطيع ضمان حماية محدّدة لديها،
+    ولهذا ننصح بعدم إرسال نصوص حسّاسة إليها.
+  </p>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">الاحتفاظ</span>
+  <h2>مدة الاحتفاظ بالبيانات وحذفها</h2>
+  <ul>
+    <li><strong>على جهازك:</strong> تبقى البيانات حتى تحذفها، أو تمسح بيانات التطبيق (إعدادات Android ← التطبيقات ← التطبيق ← التخزين ← مسح البيانات)، أو تزيل التطبيق.</li>
+    <li><strong>إحصاءات الاستخدام (إن شُغّلت):</strong> تحذفها Google Analytics تلقائياً بعد 14 شهراً كحدّ أقصى، وإيقافها يوقف الجمع ويحذف المعرّف من جهازك.</li>
+    <li><strong>خدمات الترجمة:</strong> تتعامل كل خدمة مع النص وفق شروطها، ولا نحتفظ بنسخة منه.</li>
+    <li><strong>مواقع الذكاء الاصطناعي:</strong> تحتفظ كل خدمة بمحادثاتك في حسابك. لإزالة تسجيل الدخول من التطبيق، سجّل الخروج من الموقع أو امسح بيانات التطبيق، ولحذف المحادثات استخدم إعدادات الخدمة نفسها.</li>
+    <li><strong>الإعلانات وفحص الأمان:</strong> تحتفظ Google بهذه المعلومات وفق قواعدها الخاصة.</li>
+  </ul>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">حقوقك</span>
+  <h2>حقوقك وخياراتك</h2>
+  <p>
+    بحسب مكان إقامتك (مثل اللائحة العامة لحماية البيانات في الاتحاد الأوروبي أو المملكة المتحدة)، يحق لك الوصول إلى بياناتك الشخصية
+    وتصحيحها وحذفها، وتقييد استخدامها أو الاعتراض عليه، وطلب نقلها.
+    يمكنك سحب موافقتك في أي وقت من الصفحة 1 ← خيارات الخصوصية، ولا يؤثّر السحب في المعالجة التي تمّت قبله.
+  </p>
+  <p>
+    لست ملزَماً بتقديم أي بيانات، وإن لم تستخدم ميزة ما فلا تُرسل بياناتها. ولا يُتّخذ بشأنك أي قرار آلي
+    له أثر قانوني أو أثر مماثل. ولأنه لا يوجد حساب ولا نخزّن نصّك، فإن معظم بياناتك إمّا على جهازك فقط
+    أو لدى Google تحت معرّف عشوائي. راسلنا وسنساعدك في أي طلب يمكننا تنفيذه.
+  </p>
+  <p>
+    يحق لك أيضاً تقديم شكوى إلى سلطة حماية البيانات المختصة: في الاتحاد الأوروبي سلطة بلدك،
+    وفي المملكة المتحدة مكتب مفوّض المعلومات (<bdi>ico.org.uk</bdi>).
+  </p>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">الحماية</span>
+  <h2>أمان البيانات</h2>
+  <p>
+    تستخدم الميزات المتصلة بالإنترنت اتصالات مشفّرة (HTTPS)، ولا يسمح التطبيق بالاتصالات غير المشفّرة.
+    وتُحفظ الإعدادات الحسّاسة على جهازك بصيغة مشفّرة.
+  </p>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">الأطفال</span>
+  <h2>خصوصية الأطفال</h2>
+  <p>
+    التطبيق غير موجّه إلى الأطفال دون 13 عاماً، ولا نجمع عن قصد بيانات شخصية منهم.
+    وفي البلدان التي تحدّد سنّاً أعلى للموافقة على الخدمات الإلكترونية، ينبغي ألّا يشغّل الأطفال دون تلك السنّ
+    إحصاءات الاستخدام دون إذن أحد الوالدين.
+  </p>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">التحديثات</span>
+  <h2>التغييرات على هذه السياسة</h2>
+  <p>
+    قد نحدّث هذه السياسة من وقت لآخر، وسنغيّر تاريخ «آخر تحديث» أعلاها عند أي تعديل.
+    ننصحك بمراجعتها بين حين وآخر.
   </p>
 </div>
 
@@ -383,8 +599,11 @@
   <h2>التواصل</h2>
   <div class="contact-box">
     <p>
-      إذا كانت لديك أي أسئلة حول هذه السياسة،
-      يمكنك التواصل معنا عبر صفحة التطبيق على Google Play.
+      لأي سؤال أو طلب يتعلّق بالخصوصية أو بهذه السياسة، راسلنا على:
+      <a href="mailto:ahmadjoyer@gmail.com">ahmadjoyer@gmail.com</a>
+    </p>
+    <p>
+      المطوّر: احمد وقطع — يمكنك أيضاً التواصل معنا عبر صفحة التطبيق على Google Play.
     </p>
   </div>
 </div>
@@ -399,44 +618,97 @@
 
 
 <!-- ════════ ENGLISH ════════ -->
-<div class="en">
+<div class="en" lang="en">
 
 <div class="page">
   <span class="section-eyebrow">Introduction</span>
   <h2>About This Policy</h2>
   <p>
-    Reverse Keyboard is an Arabic keyboard application for Android devices.
-    We respect and are committed to protecting your privacy. This policy explains what we collect and what we do not collect.
+    This policy explains how <strong>“KeySnatcher: Arabic Keyboard”</strong>, published on Google Play and shown in the app
+    as <strong>“Khatef Keyboard” (خاطف كيبورد)</strong>, handles your data. The app is a keyboard for Android devices.
+    It is available in two versions, and this policy applies to both:
+  </p>
+  <ul>
+    <li>Free version: com.khattef.keyboard.free</li>
+    <li>Pro version: com.khattef.keyboard</li>
+  </ul>
+  <p>
+    Developer and data controller: <strong><bdi>احمد وقطع</bdi></strong>.
+    Privacy contact: <a href="mailto:ahmadjoyer@gmail.com">ahmadjoyer@gmail.com</a>.
+  </p>
+  <p>
+    Everything in this policy applies to both versions unless a section states that it applies to only one of them.
   </p>
 </div>
 
 <div class="page">
-  <span class="section-eyebrow">Data</span>
-  <h2>What We Do Not Collect</h2>
+  <span class="section-eyebrow">Languages</span>
+  <h2>Supported Languages</h2>
+  <p>
+    The app is designed primarily for <strong>Arabic and English</strong>. These are the <strong>only two languages the app officially supports</strong>.
+    The app interface, the built-in keyboard layouts, the help content and this policy are provided in these two languages.
+  </p>
+  <p>
+    Other languages may be available in certain features or through external services, such as translation, voice input,
+    screen text recognition, or keyboard layouts that you import yourself. These languages are <strong>not officially supported</strong>.
+    Their availability and quality may vary, and full compatibility is not guaranteed. The availability of a language in a
+    particular feature does not mean that the app as a whole officially supports that language.
+  </p>
+  <p>
+    When you use another language in a feature that relies on an external service, your data is handled as described for
+    that feature in this policy.
+  </p>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">Summary</span>
+  <h2>In Short</h2>
   <ul>
-    <li>We do not collect any text you type on the keyboard.</li>
-    <li>We do not store passwords or sensitive data.</li>
-    <li>We do not send your personal data to any third party.</li>
-    <li>We do not use any tracking tools or user analytics.</li>
+    <li>What you type is processed on your device. We do not run servers that receive or store your text, and we do not sell your data.</li>
+    <li>Text leaves your device only when you use a feature that needs the internet: online translation, the AI Assistant or PC Bridge.</li>
+    <li>Usage statistics are off by default and run only if you switch them on.</li>
+    <li>The Free version shows ads from Google AdMob. The Pro version has no ads.</li>
+    <li>There is no account. We do not ask for your name, email address or phone number.</li>
   </ul>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">Data</span>
+  <h2>Data That Stays on Your Device</h2>
+  <ul>
+    <li>What you type, word suggestions, spell-check and undo history.</li>
+    <li>Your shortcuts, settings and themes.</li>
+    <li>Clipboard items and clipboard vaults.</li>
+    <li>Read-aloud, which uses the text-to-speech engine installed on your device.</li>
+  </ul>
+  <p>
+    This data is never uploaded to any server. Automatic backup of app data is disabled, so it is not copied to your
+    cloud account or transferred to another device.
+  </p>
 </div>
 
 <div class="page">
   <span class="section-eyebrow">Translation</span>
   <h2>Text Translation Feature</h2>
   <p>
-    When you tap the translate button in the toolbar, the text you select is sent
-    to free, open-source translation services.
-    The app tries the following services in order until one succeeds:
+    When you ask for a translation from the toolbar, the text is translated on your device with <strong>Google ML Kit</strong>
+    whenever possible, and nothing is sent. The required language files may be downloaded from Google the first time.
+  </p>
+  <p>
+    Otherwise, only the text you ask to translate, together with the source and target languages, is sent to online
+    translation services. To return a result quickly, it may be sent to more than one service at the same time:
   </p>
   <ul>
-    <li><strong>MyMemory</strong> — api.mymemory.translated.net</li>
+    <li><strong>Google Translate</strong> (Google)</li>
+    <li><strong>Lingva</strong> — lingva.ml, translate.plausibility.cloud and lingva.tiekoetter.com, which pass the text on to Google Translate</li>
+    <li><strong>MyMemory</strong> (Translated) — api.mymemory.translated.net</li>
     <li><strong>LibreTranslate</strong> — libretranslate.com and translate.argosopentech.com</li>
     <li><strong>Apertium</strong> — apertium.org</li>
   </ul>
   <p>
-    These services have their own independent privacy policies.
-    No text is sent without an explicit action from you.
+    Some of these services are independent or volunteer-run. Each one has its own terms and privacy policy, and we have no
+    contract with them. No text is sent without an explicit action from you. Please do not translate sensitive information
+    online, such as passwords or health, financial or identity details.
   </p>
 </div>
 
@@ -444,14 +716,11 @@
   <span class="section-eyebrow">Voice</span>
   <h2>Voice Translation Feature</h2>
   <p>
-    When the "Voice Translation" feature is enabled and you tap the microphone button,
-    your speech is processed locally via Android's speech recognition system.
-    If the app detects that the spoken language differs from the keyboard language,
-    the recognised text is sent to one of the translation services above.
+    When “Voice Translation” is turned on and you tap the microphone button, your speech is converted to text by your
+    device’s speech-recognition service. The recognised text is then translated as described in the Text Translation section.
   </p>
   <p>
-    You can disable this feature from the app settings → Voice Translation → OFF.
-    When disabled, speech is typed directly without any data being sent to external servers.
+    You can turn this feature off in the app’s settings at any time. When it is off, your speech is typed directly without translation.
   </p>
 </div>
 
@@ -459,18 +728,18 @@
   <span class="section-eyebrow">Permissions</span>
   <h2>Microphone Permission</h2>
   <p>
-    The microphone is used only when you tap the voice input button.
-    Audio is not recorded or stored — it is processed directly by
-    your device's speech recognition service (Google Speech).
+    The microphone is used only after you tap the voice-input button. Your speech is converted to text by your device’s
+    speech-recognition service (for example, Google’s), which may process it on its own servers under its own privacy policy.
+    The app does not record or store audio.
   </p>
 </div>
 
 <div class="page">
-  <span class="section-eyebrow">Permissions</span>
-  <h2>Photos &amp; Video Permission</h2>
+  <span class="section-eyebrow">Backgrounds</span>
+  <h2>Photos &amp; Videos</h2>
   <p>
-    Used to allow you to select an image or video to set as the keyboard background.
-    Files remain on your device and are not uploaded to any server.
+    You can choose a picture or video as the keyboard background through the Android system picker, so the app can access
+    only the file you select. Files remain on your device and are not uploaded to any server.
   </p>
 </div>
 
@@ -478,8 +747,7 @@
   <span class="section-eyebrow">Privacy</span>
   <h2>Password Fields</h2>
   <p>
-    When typing in password fields, the app automatically stops
-    displaying suggestions or storing any text.
+    When you type in a password field, the keyboard shows no suggestions and saves no text.
   </p>
 </div>
 
@@ -487,41 +755,201 @@
   <span class="section-eyebrow">Clipboard</span>
   <h2>Clipboard</h2>
   <p>
-    The app monitors the clipboard to display a quick-paste button in the toolbar.
-    The last copied text is stored locally on your device only and is not sent to any external server.
-    The clipboard is only accessed when the keyboard is open.
+    The keyboard reads the clipboard only while it is open, to offer quick paste in the toolbar. Clipboard items and
+    clipboard vaults are stored on your device only and are not sent to any external server.
   </p>
 </div>
 
 <div class="page">
   <span class="section-eyebrow">Screen OCR</span>
-  <h2>Screen Translation Feature</h2>
+  <h2>Screen Translation and Screen Copy</h2>
   <p>
-    When you tap the screen translation icon in the toolbar, the app requests Android's official
-    screen capture permission (<strong>MediaProjection</strong>) via a system dialog shown to you.
-    A persistent notification with a stop button is displayed throughout the entire session —
-    the session never starts without a visible notification.
+    These features run only when you start them. The app then requests Android’s official screen-capture permission
+    (<strong>MediaProjection</strong>) through a system dialog, and Android shows a visible notification for the whole session.
   </p>
   <ul>
-    <li>A screen frame is captured only on your explicit request; no automatic capturing occurs.</li>
-    <li>Text is analysed locally on your device using the <strong>Tesseract</strong> OCR library — no internet connection required.</li>
-    <li>No screen content is ever sent to any external server.</li>
-    <li>The session ends immediately when you tap the stop button in the notification or from within the app.</li>
+    <li>The screen image is read on your device using <strong>Google ML Kit</strong> and <strong>Tesseract</strong>, and is not uploaded to any server.</li>
+    <li>Google Play services on your device may download the text-recognition models.</li>
+    <li>Only the recognised text is translated, as described in the Text Translation section.</li>
+    <li>The session ends as soon as you stop it from the notification or from within the app.</li>
   </ul>
   <p>
-    The <strong>SYSTEM_ALERT_WINDOW</strong> permission (draw over other apps) is used solely
-    to display the translation result as a floating overlay — it is not used for any other purpose.
+    The <strong>display over other apps</strong> permission is used only to show floating icons and windows
+    (such as translation results and the AI Assistant), and for no other purpose.
+  </p>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">AI</span>
+  <h2>AI Assistant and Auto Reply (Beta)</h2>
+  <p>
+    These features are in beta and may not always work as expected. They work only if you turn them on.
+  </p>
+  <ul>
+    <li><strong>AI Assistant:</strong> opens the official website of the AI service you choose inside an in-app window:
+      ChatGPT (OpenAI), Gemini (Google), Claude (Anthropic), Copilot (Microsoft) or DeepSeek. You sign in on that website
+      with your own account. Whatever you send there goes directly to that service and is handled under its own terms and
+      privacy policy. We do not receive your password or your conversations. The website’s sign-in cookies are kept on your device.</li>
+    <li><strong>Auto Reply:</strong> when you copy text, the assistant opens with that text in the message box.
+      Nothing is sent until you tap Send yourself.</li>
+  </ul>
+  <p>
+    We are not affiliated with these services. Their names are used only to describe what the app works with.
+  </p>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">PC Bridge</span>
+  <h2>PC Bridge</h2>
+  <p>
+    When you pair your phone with your Windows computer, what you type is sent directly to that computer over your local
+    Wi-Fi network or a USB cable. The connection is encrypted end to end and does not pass through our servers or any other server.
+  </p>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">Statistics</span>
+  <h2>Usage Statistics (Optional)</h2>
+  <p>
+    The app uses <strong>Google Analytics for Firebase</strong>. It is <strong>off by default</strong> and runs only if you
+    switch it on in Page 1 → Privacy choices. You can switch it off at any time; doing so also deletes the analytics
+    identifier on your device.
+  </p>
+  <p>
+    When it is on, Google collects automatically recorded usage events (such as app opens and session length), device and
+    app details (model, Android version, language, app version), a random app-instance identifier, how the app was installed,
+    and an approximate location derived from your IP address (not GPS). It never includes what you type, and the advertising
+    ID is not collected for statistics.
+  </p>
+  <p>
+    Purpose: to understand how the app is used and to improve it. Legal basis: your consent, which you can withdraw at any time.
+  </p>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">Security</span>
+  <h2>App Security Check</h2>
+  <p>
+    To protect users from modified or unofficial copies, the app checks its own signature and installation source on your
+    device. It also uses Google’s <strong>Firebase App Check</strong> with <strong>Play Integrity</strong> to confirm that the
+    app and the device are genuine. For this check, Google receives information about the app, the device and its integrity
+    status, under Google’s privacy policy. No text you type is involved.
+  </p>
+  <p>
+    Legal basis: our legitimate interest in keeping the app and its users safe.
   </p>
 </div>
 
 <div class="page">
   <span class="section-eyebrow">Advertising</span>
-  <h2>Advertising (AdMob)</h2>
+  <h2>Advertising (AdMob) — Free Version Only</h2>
   <p>
-    The free version displays ads via <strong>Google AdMob</strong>.
-    This service may collect device data to show relevant ads in accordance with
-    <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.
-    You can opt out of personalised ads from: Settings → Google → Ads.
+    The Free version shows ads from <strong>Google AdMob</strong>: full-screen ads, shown sometimes when you move between pages
+    or after several key swaps, and optional rewarded ads that you choose to watch to unlock some features for a limited time.
+  </p>
+  <ul>
+    <li><strong>Consent:</strong> in the EEA, the UK and Switzerland, Google’s consent form is shown before any ad is requested,
+      and the ad service does not start until a consent decision is available. You can change your choice later in
+      Page 1 → Privacy choices → Ad choices, where this option applies.</li>
+    <li><strong>What AdMob collects:</strong> your device’s advertising ID, IP address, device information and ad interactions.
+      Google uses them to show, limit and measure ads, to prevent fraud and, only where you agree, to personalise ads. See
+      <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use its services</a>
+      and <a href="https://policies.google.com/privacy">Google’s Privacy Policy</a>.</li>
+    <li><strong>Your control:</strong> you can reset or delete your advertising ID in your device settings (Google → Ads).</li>
+    <li><strong>Legal basis:</strong> your consent where the law requires it (EEA, UK, Switzerland); elsewhere, our legitimate
+      interest in funding the Free version.</li>
+  </ul>
+  <p>
+    <strong>Pro version:</strong> no ads. The advertising service does not run, the advertising-ID permission is not included,
+    and no ad consent form is shown. Pro is a separate app on Google Play, and settings from the Free version are not transferred to it.
+  </p>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">Permissions</span>
+  <h2>Permissions and Why They Are Used</h2>
+  <ul>
+    <li><strong>Microphone:</strong> voice input, only after you tap the button.</li>
+    <li><strong>Display over other apps:</strong> floating icons and windows (translation, AI Assistant).</li>
+    <li><strong>Screen capture (foreground service):</strong> screen translation and screen copy, only when you start them.</li>
+    <li><strong>Foreground service (data sync):</strong> keeping PC Bridge connected while you use it.</li>
+    <li><strong>Notifications:</strong> the notice shown while those features are running.</li>
+    <li><strong>Internet, network and Wi-Fi state:</strong> the online features above, PC Bridge, and ads in the Free version.</li>
+    <li><strong>Vibration:</strong> key-press feedback.</li>
+  </ul>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">Sharing</span>
+  <h2>Who Receives Data, and International Transfers</h2>
+  <p>
+    Data is sent only to the services named in this policy, and only for the purpose described for each one. We do not sell your data.
+  </p>
+  <p>
+    Google and several of the translation and AI services process data outside your country, including in the United States.
+    For transfers from the EU and the UK, Google relies on recognised safeguards such as the EU–US Data Privacy Framework and
+    standard contractual clauses. The independent translation services may be located anywhere, and we cannot guarantee
+    specific safeguards for them. This is why you should not send sensitive text to them.
+  </p>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">Retention</span>
+  <h2>How Long Data Is Kept, and How to Delete It</h2>
+  <ul>
+    <li><strong>On your device:</strong> until you delete it, clear the app’s data (Android Settings → Apps → the app → Storage → Clear data) or uninstall the app.</li>
+    <li><strong>Usage statistics (only if switched on):</strong> deleted automatically by Google Analytics after at most 14 months. Switching statistics off stops collection and deletes the identifier on your device.</li>
+    <li><strong>Translation services:</strong> each service handles the text under its own terms. We do not keep a copy.</li>
+    <li><strong>AI websites:</strong> your conversations are kept by the AI service in your account. To remove the sign-in from the app, sign out on the website or clear the app’s data. To delete your conversations, use that service’s own settings.</li>
+    <li><strong>Advertising and security check:</strong> Google keeps this information under its own retention rules.</li>
+  </ul>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">Your Rights</span>
+  <h2>Your Rights and Choices</h2>
+  <p>
+    Depending on where you live (for example, under the EU GDPR or the UK GDPR), you have the right to access, correct or
+    delete your personal data, to restrict or object to its use, and to data portability. You can withdraw your consent at
+    any time in Page 1 → Privacy choices. This does not affect processing that took place before.
+  </p>
+  <p>
+    You do not have to provide any data; if you do not use a feature, its data is not sent. No decision that has a legal or
+    similarly significant effect on you is made by automated means. Because there is no account and we do not store your text,
+    most of your data is either only on your device or held by Google under a random identifier. Email us and we will help
+    with any request we can act on.
+  </p>
+  <p>
+    You can also complain to a data protection authority: in the EU, the authority in your country; in the UK, the
+    Information Commissioner’s Office (ico.org.uk).
+  </p>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">Protection</span>
+  <h2>Data Security</h2>
+  <p>
+    Online features use encrypted connections (HTTPS), and the app does not allow unencrypted connections.
+    Sensitive settings are stored on your device in encrypted form.
+  </p>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">Children</span>
+  <h2>Children’s Privacy</h2>
+  <p>
+    The app is not directed at children under 13, and we do not knowingly collect personal data from them. In countries that
+    set a higher age for consenting to online services, children under that age should not switch on usage statistics without
+    a parent’s permission.
+  </p>
+</div>
+
+<div class="page">
+  <span class="section-eyebrow">Updates</span>
+  <h2>Changes to This Policy</h2>
+  <p>
+    We may update this policy from time to time. When we do, we will change the “Last updated” date at the top.
+    We encourage you to review it periodically.
   </p>
 </div>
 
@@ -530,8 +958,11 @@
   <h2>Contact Us</h2>
   <div class="contact-box">
     <p>
-      If you have any questions about this policy,
-      you can reach us through the app's page on Google Play.
+      For any question or request about privacy or this policy, email us at
+      <a href="mailto:ahmadjoyer@gmail.com">ahmadjoyer@gmail.com</a>.
+    </p>
+    <p>
+      Developer: <bdi>احمد وقطع</bdi>. You can also reach us through the app’s page on Google Play.
     </p>
   </div>
 </div>
@@ -541,7 +972,7 @@
 
 <!-- ════════ FOOTER ════════ -->
 <footer>
-  <p>Reverse Keyboard · Privacy Policy · 2026</p>
+  <p>KeySnatcher (Khatef Keyboard) · Privacy Policy · November 2026</p>
 </footer>
 
 </body>
